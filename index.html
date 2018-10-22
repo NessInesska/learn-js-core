@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./src/index.css">
+        <script src="https://cdn.polyfill.io/v1/polyfill.js?features=Element.prototype.closest"></script>
+        <script src="./src/index.js"></script>
+        <!--<script type="text/css" src="./index.css"></script>-->
         <title>Sample Webpack App</title>
     </head>
     <body>
+        <div id="sweets-menu" class="menu">
+            <span class="title">Сладости</span>
+            <ul>
+                <li>Торт</li>
+                <li>Пончик</li>
+                <li>Пирожное</li>
+                <li>Шоколадка</li>
+                <li>Мороженое</li>
+            </ul>
+        </div>
+
+        <script>
+            var menu = new Menu({
+                elem: document.getElementById('sweets-menu')
+            });
+        </script>
+
         <script src="/bundle.js"></script>
     </body>
 </html>

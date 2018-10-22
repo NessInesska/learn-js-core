@@ -1,5 +1,15 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    const element = document.createElement('h1')
-    element.innerHTML = "Hello World"
-    document.body.appendChild(element)
-})
+function Menu(options) {
+    var elem = options.elem;
+
+    elem.onmousedown = function() {
+        return false;
+    }
+
+    elem.onclick = function(event) {
+        let closestTitle = event.target.closest('.title');
+        if (closestTitle && elem.contains(closestTitle)) {
+            elem.classList.toggle('open');
+        }
+    };
+
+}
